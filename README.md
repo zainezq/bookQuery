@@ -9,7 +9,7 @@
 4. [Project Structure](#project-structure)
 5. [How to Run](#how-to-run)
 6. [Sample Outputs](#sample-outputs)
-7. [Submission](#submission)
+7. [Acknowledgements](#acknowledgments)
 
 ## About
 
