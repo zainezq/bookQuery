@@ -22,6 +22,7 @@ The project aims to integrate various components, including database access, ser
 ## Project Setup
 
 Before starting, make sure to set up the database and import the provided `books.sql` file into your PostgreSQL database.
+You will need to download PostgreSQL for this to work.
 
 ## Project Structure
 
@@ -33,10 +34,13 @@ The project contains the following Java files:
 ## How to Run
 
 To run the project, follow these steps:
-1. Set up the database by importing the `books.sql` file into your PostgreSQL database.
-2. Compile the Java files.
-3. Run the `BooksDatabaseServer.java` to start the server.
-4. Run the `BooksDatabaseClient.java` to start the client application.
+1. Set up the database by importing the `books.sql` file into your PostgreSQL database. To do this, open your PSQL shell, connect to the default port, enter your username and password. Then run the command:
+` \i 'C:/Users/YourUsername/Downloads/books.sql' `
+changing as necessary to where you saved the books.sql
+2. in the Credentials.java class, change the `USERNAME` and `PASSWORD` to the one you used in PSQL.
+3. Compile the Java files.
+4. Run the `BooksDatabaseServer.java` to start the server.
+5. Run the `BooksDatabaseClient.java` to start the client application.
 
 ## Sample Outputs
 
