@@ -1,7 +1,7 @@
 public class Credentials {
     //JDBC connection
-    public static final String USERNAME = "postgres";
-    public static final String PASSWORD = "shakkal123";
+    public static final String USERNAME = "your_username";
+    public static final String PASSWORD = "your_password";
     public static final String URL = "jdbc:postgresql://localhost:5432/FSAD2023_Books";
     //Client-server connection
     public static final String HOST = "127.0.0.1"; //localhost
