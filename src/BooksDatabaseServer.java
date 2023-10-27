@@ -20,9 +20,6 @@ public class BooksDatabaseServer {
     private String theIPAddress = null;
     private ServerSocket serverSocket =  null;
 	
-	//Support for closing the server
-	//private boolean keypressedFlag = false;
-	
 
     //Class constructor
     public BooksDatabaseServer(){
@@ -35,7 +32,6 @@ public class BooksDatabaseServer {
         System.out.println("Server: Exit server application by pressing Ctrl+C (Windows or Linux) or Opt-Cmd-Shift-Esc (Mac OSX)." );
         try {
             //Initialize the socket
-            //TO BE COMPLETED //DONE
             serverSocket = new ServerSocket(thePort, 3, InetAddress.getByName(theIPAddress));
 
             System.out.println("Server: Server at " + theIPAddress + " is listening on port : " + thePort);
@@ -58,7 +54,6 @@ public class BooksDatabaseServer {
             //Service loop
             while (true) {
 				
-                //TO BE COMPLETED //DONE
                 BooksDatabaseService thread = new BooksDatabaseService(serverSocket.accept());
 
             }
