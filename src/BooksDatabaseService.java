@@ -43,7 +43,6 @@ public class BooksDatabaseService extends Thread {
     //Class constructor
     public BooksDatabaseService(Socket aSocket) {
 
-        //TO BE COMPLETED //DONE
         this.serviceSocket = aSocket;
         this.start();
     }
@@ -57,7 +56,6 @@ public class BooksDatabaseService extends Thread {
         String tmp = "";
         try {
 
-            //TO BE COMPLETED //DONE
             InputStream outComeStream = serviceSocket.getInputStream();
             InputStreamReader outComeStreamReader = new InputStreamReader(outComeStream);
             StringBuffer stringBuffer = new StringBuffer();
@@ -88,19 +86,16 @@ public class BooksDatabaseService extends Thread {
 
         try {
             //Connet to the database
-            //TO BE COMPLETED //DONE
             Class.forName("org.postgresql.Driver");
             Connection conn = DriverManager.getConnection(URL, USERNAME, PASSWORD);
 
             //Make the query
-            //TO BE COMPLETED //DONE
             PreparedStatement preparedStatement = conn.prepareStatement(sql);
             preparedStatement.clearParameters();
             preparedStatement.setString(1, this.requestStr[0]);
             preparedStatement.setString(2, this.requestStr[1]);
 
             //Process query
-            //TO BE COMPLETED -  Watch out! You may need to reset the iterator of the row set.
             ResultSet rs = preparedStatement.executeQuery();
             RowSetFactory aFactory = RowSetProvider.newFactory();
 
@@ -120,7 +115,6 @@ public class BooksDatabaseService extends Thread {
 
 
             //Clean up
-            //TO BE COMPLETED
             rs.close();
             preparedStatement.close();
             conn.close();
@@ -136,7 +130,6 @@ public class BooksDatabaseService extends Thread {
     public void returnServiceOutcome() {
         try {
             //Return outcome
-            //TO BE COMPLETED
 
             ObjectOutputStream outStream = new ObjectOutputStream(serviceSocket.getOutputStream());
             outStream.writeObject(outcome);
@@ -145,7 +138,6 @@ public class BooksDatabaseService extends Thread {
             System.out.println("Service thread " + this.getId() + ": Service outcome returned; " + this.outcome);
 
             //Terminating connection of the service socket
-            //TO BE COMPLETED
             serviceSocket.close();
 
         } catch (IOException e) {
