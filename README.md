@@ -72,7 +72,7 @@ The client application provides both GUI and console output. You can see the ser
 
 ## Acknowledgments
 
-This project was completed as part of an assignment for University Of Birmingham under the guidance of Felipe Orihuela-Espina. The project templates and guidelines were provided by the university, and I appreciate their valuable support throughout the assignment.
+This project was completed as part of an assignment for University Of Birmingham under the guidance of Professor Felipe Orihuela-Espina. The project templates and guidelines were provided by the university, and I appreciate their valuable support throughout the assignment.
 
 
 
