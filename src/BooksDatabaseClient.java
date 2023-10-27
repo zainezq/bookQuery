@@ -125,7 +125,6 @@ public class BooksDatabaseClient extends Application {
 	//Initializes the client socket using the credentials from class Credentials.
 	public void initializeSocket(){
         
-		//TO BE COMPLETED
 		try {
 			clientSocket = new Socket(Credentials.HOST, Credentials.PORT);
 		} catch (Exception e) {
@@ -138,8 +137,7 @@ public class BooksDatabaseClient extends Application {
         try {
             System.out.println("Client: Requesting books database service for user command\n" + this.userCommand +"\n");
 
-            //TO BE COMPLETED
-			OutputStream requestStream = this.clientSocket.getOutputStream();
+          			OutputStream requestStream = this.clientSocket.getOutputStream();
 			OutputStreamWriter requestStreamWriter = new OutputStreamWriter(requestStream);
 			requestStreamWriter.write(this.userCommand + "#");
 			requestStreamWriter.flush();
@@ -153,8 +151,7 @@ public class BooksDatabaseClient extends Application {
     public void reportServiceOutcome() {
         try {
 
-            //TO BE COMPLETED
-			ObjectInputStream outcomeStreamReader = new ObjectInputStream ( clientSocket.getInputStream() ) ;
+            		ObjectInputStream outcomeStreamReader = new ObjectInputStream ( clientSocket.getInputStream() ) ;
 			serviceOutcome = ( CachedRowSet ) outcomeStreamReader . readObject () ;
 			TableView result = (TableView) thePrimaryStage.getScene().lookup("TableView");
 
@@ -206,7 +203,6 @@ public class BooksDatabaseClient extends Application {
 		
 		//Build user message command
 
-		//TO BE COMPLETED
 		if (authorInputBox.getText().isEmpty() || libraryInputBox.getText().isEmpty()) {
 			// Display error message to the user or just return from the method
 			return;
