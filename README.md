@@ -21,8 +21,9 @@ The project aims to integrate various components, including database access, ser
 
 ## Project Setup
 
-Before starting, make sure to set up the database and import the provided `books.sql` file into your PostgreSQL database.
-You will need to download PostgreSQL for this to work.
+Before starting, make sure to set up the database and import the provided `books.sql` file into your PostgreSQL database. Please download and install PostgreSQL if you haven't already.
+
+**Note:** JDBC (Java Database Connectivity) is also required for this project to work. Make sure you have JDBC properly configured in your project for database interaction. 
 
 ## Project Structure
 
@@ -30,17 +31,34 @@ The project contains the following Java files:
 - `BooksDatabaseServer.java`: The server's main class.
 - `BooksDatabaseService.java`: The service provider responsible for handling client requests.
 - `BooksDatabaseClient.java`: The client application with a JavaFX GUI.
+- `Credentials.java`: Contains the credentials for the database.
 
 ## How to Run
 
-To run the project, follow these steps:
-1. Set up the database by importing the `books.sql` file into your PostgreSQL database. To do this, open your PSQL shell, connect to the default port, enter your username and password. Then run the command:
-` \i 'C:/Users/YourUsername/Downloads/books.sql' `
-changing as necessary to where you saved the books.sql
-2. in the Credentials.java class, change the `USERNAME` and `PASSWORD` to the one you used in PSQL.
-3. Compile the Java files.
-4. Run the `BooksDatabaseServer.java` to start the server.
-5. Run the `BooksDatabaseClient.java` to start the client application.
+1. **Database Setup**:
+   - Import the `books.sql` file into your PostgreSQL database.
+   - Open your PSQL shell, connect to the default port, and enter your username and password.
+   - Run the following command:
+     ```
+     \i 'C:/Users/YourUsername/Downloads/books.sql'
+     ```
+   - Make sure to replace the file path with the actual location where you saved the `books.sql`.
+
+2. **Update Credentials**:
+   - Open the `Credentials.java` class.
+   - Update the `USERNAME` and `PASSWORD` with the credentials you used in PostgreSQL.
+   - Ensure that your project includes JDBC for Java database connectivity.
+
+3. **Compile Java Files**:
+   - Compile the Java files in your project.
+
+4. **Start the Server**:
+   - Run the `BooksDatabaseServer.java` to start the server.
+
+5. **Launch the Client**:
+   - Run the `BooksDatabaseClient.java` to start the client application.
+
+By following these steps, you'll successfully set up and run the project with JDBC for database interaction.
 
 ## Sample Outputs
 
